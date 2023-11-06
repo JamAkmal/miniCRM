@@ -2,7 +2,7 @@
 @section('title','Home Page')
 
 @section('content')
-    <h3 class="text-center">List OF All Companies </h3>
+    <h3 class="text-center">List OF All Companies,Edit done by Git</h3>
     <div class="container mt-3 ">
         <table class="table table-hover" id="myTable">
             <thead>
