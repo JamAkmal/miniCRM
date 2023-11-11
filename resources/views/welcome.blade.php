@@ -2,17 +2,17 @@
 @section('title','Home Page')
 
 @section('content')
-    <h3 class="text-center">List OF All Companies</h3>
+    <h3 class="text-center">{{__('welcome.list')}} {{__('welcome.of')}} {{__('welcome.all')}} {{__('welcome.companies')}}</h3>
     <div class="container mt-3 ">
         <table class="table table-hover" id="myTable">
             <thead>
                 <tr>
                 <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Website</th>
-                <th scope="col">Logo</th>
-                <th scope="col">Action</th>
+                <th scope="col">{{__('welcome.name')}}</th>
+                <th scope="col">{{__('welcome.email')}}</th>
+                <th scope="col">{{__('welcome.website')}}</th>
+                <th scope="col">{{__('welcome.logo')}}</th>
+                <th scope="col">{{__('welcome.action')}}</th>
                 </tr>
             </thead>
             <tbody>

@@ -2,6 +2,7 @@
 use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Company;
 use App\Http\Controllers\Employee;
+use App\Http\Controllers\LanguageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,4 +45,8 @@ Route::group(['middleware' => 'adminauth'], function () {
 
     // Modify the logout route and its logic
     Route::post('/logout', [AdminAuthController::class, 'adminLogout'])->name('adminLogout');
+});
+ // language switcher
+ Route::middleware(['middleware' => 'LanguageManager'])->group(function () {
+    Route::post('/lang/{locale}', [LanguageController::class, 'switchLanguage'])->name('lang.switch');
 });
