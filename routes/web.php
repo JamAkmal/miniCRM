@@ -47,6 +47,5 @@ Route::group(['middleware' => 'adminauth'], function () {
     Route::post('/logout', [AdminAuthController::class, 'adminLogout'])->name('adminLogout');
 });
  // language switcher
- Route::middleware(['middleware' => 'LanguageManager'])->group(function () {
+
     Route::post('/lang/{locale}', [LanguageController::class, 'switchLanguage'])->name('lang.switch');
-});
