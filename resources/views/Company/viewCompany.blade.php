@@ -3,21 +3,19 @@
 
 
 @section('content')
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-md-4" style="display: flex">
             <div class="card m-auto" style="width: 24rem;text-align:center;">
-                <img src="{{ asset('/storage/' . $company->logo) }}" height="75" width="75" alt="" style="align-self: center">
+                <img src="{{ asset('/storage/' . $company->logo) }}" height="100" width="100" alt="" style="align-self: center">
                 <div class="card-body">
                     <h5 class="card-title">Company Name : {{$company->name}}</h5>
-                    {{-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                        content.</p> --}}
                 </div>
 
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Company Website : {{$company->website}}</li>
-                        <li class="list-group-item">Company Email : {{$company->email}}</li>
+                        <li class="list-group-item"><b>Company Website :</b> {{$company->website}}</li>
+                        <li class="list-group-item"><b>Company Email :</b> {{$company->email}}</li>
                     </ul>
                 </div>
             </div>
@@ -58,6 +56,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div class="row d-grid justify-content-md-center mt-4">{{ $companies->links() }}</div>
             </div>
         </div>
     </div>
