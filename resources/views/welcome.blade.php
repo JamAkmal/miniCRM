@@ -26,6 +26,7 @@
                             <img src="{{ asset('/storage/' . $company->logo) }}" height="75" width="75" alt="">
                         </td>
                         <td>
+                            <a href="{{ route('company.view', ['company' => $company->id]) }}" class="btn btn-sm btn-secondary">view</a>
                             <a href="{{ route('company.edit', ['company' => $company->id]) }}" class="btn btn-sm btn-primary">Edit</a>
                             <form action="{{ route('company.destroy', ['company' => $company->id]) }}" method="POST" style="display: inline;">
                                 @csrf
