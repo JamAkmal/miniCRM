@@ -29,6 +29,7 @@ Route::group(['middleware' => 'adminauth'], function () {
     Route::get('/companies', [Company::class, 'index'])->name('company.index');
     Route::get('/companies/create', [Company::class, 'create'])->name('company.create');
     Route::post('/companies', [Company::class, 'store'])->name('company.store');
+    Route::get('/companies/{company}/view', [Company::class, 'view'])->name('company.view');
     Route::get('/companies/{company}/edit', [Company::class, 'edit'])->name('company.edit');
     Route::put('/companies/{company}', [Company::class, 'update'])->name('company.update');
     Route::delete('/companies/{company}', [Company::class, 'destroy'])->name('company.destroy');

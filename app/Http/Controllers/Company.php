@@ -60,7 +60,8 @@ class Company extends Controller
      */
     public function show(string $id)
     {
-        //
+        $company = \App\Models\Company::find($id);
+        return view('Company.viewCompany',compact('company'));
     }
 
     /**
