@@ -61,7 +61,8 @@ class Company extends Controller
     public function show(string $id)
     {
         $company = \App\Models\Company::find($id);
-        return view('Company.viewCompany',compact('company'));
+        $companies = \App\Models\Company::paginate(5);
+        return view('Company.viewCompany',compact('company','companies'));
     }
 
     /**
